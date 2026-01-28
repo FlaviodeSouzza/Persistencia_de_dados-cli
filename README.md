@@ -31,7 +31,8 @@ O sistema cria automaticamente o arquivo de dados, define um cabeçalho fixo (co
 * Nome do arquivo: historico_lucro_certo.csv (nome fixo no estágio atual)
 
 **Cabeçalho do CSV**
-```data,nome,sobrenome,idade```
+
+```data,entradas,saidas,lucro```
 
 
 Cada linha do arquivo representa um registro único, seguindo rigorosamente a ordem definida no cabeçalho.
