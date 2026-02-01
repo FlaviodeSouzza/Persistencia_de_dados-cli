@@ -73,8 +73,6 @@ Praticar e consolidar conceitos fundamentais de desenvolvimento em Python, com f
 
 * Organização e evolução incremental de um projeto CLI
 
-* Presistencia de dados sem sobrescrita com _append_
-
 ### Observações Importantes
 
 >O separador utilizado no CSV é a vírgula (,), conforme o padrão internacional
