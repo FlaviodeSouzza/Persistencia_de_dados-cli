@@ -45,13 +45,13 @@ garantir_arquivo_csv()
 print('\nOlá! Vamos calcular seu resultado diário.')
 print('----' * 15)
 
-Rt = solicitar_valor('\nQual o valor total de \033[34mENTRADAS\033[0m no dia de hoje? R$ {:.2f}')
-Ct = solicitar_valor('\nQual o valor total de \033[31mSAÍDAS\033[0m no dia de hoje? R$ {:.2f}')
-lucro = Rt - Ct
+entradas_totais = solicitar_valor('\nQual o valor total de ENTRADAS no dia de hoje? R$ ')
+saidas_totais = solicitar_valor('\nQual o valor total de SAÍDAS no dia de hoje? R$ ')
+lucro = entradas_totais - saidas_totais
 
 if lucro >= 0:
     print(f'\nSeu resultado final no dia de hoje foi de \033[34mR$ {lucro:.2f}\033[0m\n!')
 else:
     print(f'\nSeu resultado final no dia de hoje foi de \033[31mR$ {lucro:.2f}\033[0m!\n')
 
-salvar_registros(Rt,Ct,lucro)
+salvar_registros(entradas_totais,saidas_totais,lucro)
