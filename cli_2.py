@@ -1,23 +1,34 @@
 """
-O projeto implementa uma aplicação de linha de comando capaz de registrar
-dados fornecidos pelo usuário e persistí-los em um arquivo CSV.
+Aplicação CLI para registrar lucro diário
+e persistir os dados em arquivo CSV.
 """
 
 import os
 from datetime import date
 
+# ========================
+# Configurações do arquivo
+# ========================
 NOME_ARQUIVO = 'historico_lucro_certo.csv'
 CABECALHO = 'data,entradas,saidas,lucro\n'
 
+# ========================
+# Persistência
+# ========================
 def garantir_arquivo_csv():
-    '''Verifica a existencia do arquivo no diretório atual.'''
+    """
+    Verifica se o arquivo CSV existe.
+    Caso não exista, cria o arquivo com cabeçalho.
+    """
     if not os.path.exists(NOME_ARQUIVO):
         with open(NOME_ARQUIVO, 'w', encoding= 'utf-8') as arquivo:
             arquivo.write(CABECALHO)
 
 
 def salvar_registros(entradas, saidas, resultado):
-    '''Salva as entradas do usuario no doc csv.'''
+    """
+    Salva um registro diário no arquivo CSV.
+    """
     data_hoje = date.today().isoformat()
 
     linha = f'{data_hoje},{entradas},{saidas},{resultado}\n'
@@ -26,8 +37,13 @@ def salvar_registros(entradas, saidas, resultado):
         arquivo.write(linha)
 
 
+# ========================
+# Entrada e validação
+# ========================
 def solicitar_valor(mensagem):
-    """Validação das variaveis de calculo"""
+    """
+    Solicita um valor numérico não negativo ao usuário.
+    """
     while True:
         try:
             valor = float(input(mensagem))
@@ -38,8 +54,10 @@ def solicitar_valor(mensagem):
         except ValueError:
             print('Valor inválido!')
 
-#Execução principal:
 
+# ========================
+# Execução do programa
+# ========================
 garantir_arquivo_csv()
 
 print('\nOlá! Vamos calcular seu resultado diário.')
