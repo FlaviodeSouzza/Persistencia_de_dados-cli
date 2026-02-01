@@ -43,7 +43,7 @@ Cada linha do arquivo representa um registro único, seguindo rigorosamente a or
 
 * No terminal, execute:
 
-``` bash * python cli_2.py```
+``` * python cli_2.py```
 
 ## Objetivo do Projeto
 
