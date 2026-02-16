@@ -4,7 +4,7 @@ Aplicação CLI desenvolvida em Python com foco em persistência local de dados,
 
 ## Descrição
 
-O projeto implementa uma aplicação de linha de comando capaz de registrar dados fornecidos pelo usuário e persistí-los em um arquivo CSV, garantindo organização, validação de entrada e histórico imutável.
+O projeto implementa uma aplicação de linha de comando capaz de registrar dados fornecidos pelo usuário, persistí-los em um arquivo CSV e realizar a leitura estruturada do histórico salvo.
 
 O sistema cria automaticamente o arquivo de dados, define um cabeçalho fixo (contrato de dados) e adiciona novos registros de forma incremental, sem sobrescrever informações anteriores.
 
@@ -21,6 +21,10 @@ O sistema cria automaticamente o arquivo de dados, define um cabeçalho fixo (co
 * Registro incremental de dados (append)
 
 * Geração automática da data do registro
+
+* Leitura estruturada dos dados persistidos
+
+* Exibição formatada do histórico completo no terminal
 
 ## Estrutura de Persistência
 
@@ -59,6 +63,9 @@ Praticar e consolidar conceitos fundamentais de desenvolvimento em Python, com f
 
 * Escrita de código limpo, legível e reutilizável
 
+* Leitura e interpretação de dados persistidos
+
+
 ## Lições Aprendidas
 
 * Criação e verificação automática de arquivos
@@ -73,6 +80,12 @@ Praticar e consolidar conceitos fundamentais de desenvolvimento em Python, com f
 
 * Organização e evolução incremental de um projeto CLI
 
+* Leitura de arquivos CSV ignorando cabeçalho
+
+* Conversão de linhas em estruturas manipuláveis (listas)
+
+* Exibição formatada de dados persistidos
+
 ### Observações Importantes
 
 >O separador utilizado no CSV é a vírgula (,), conforme o padrão internacional
@@ -83,13 +96,13 @@ Praticar e consolidar conceitos fundamentais de desenvolvimento em Python, com f
 
 ### Próximos Passos
 
-* Implementar leitura do arquivo CSV
+* Implementar menu interativo para controle de fluxo
 
-* Exibir histórico de registros no terminal
+* Permitir consulta filtrada por data
 
-* Evoluir a aplicação para controle financeiro diário (LucroCerto)
+* Evoluir estrutura para versão modular (Projeto 3)
 
 ### Status do Projeto
 
-🟢 Em desenvolvimento
-📌 Fase atual: persistência e validação de dados em CSV
+🟢 Concluído – Fase 2: Persistência e Leitura de Dados
+📌 Próxima fase: implementação de menu e controle de fluxo (Projeto 3)
